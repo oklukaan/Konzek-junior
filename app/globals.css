@@ -85,15 +85,7 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+
 
 a {
   color: inherit;
@@ -104,4 +96,71 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+/*custom css start */
+.content-type{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+.list-item{
+  border: 1px solid #8080803d;
+    padding: 15px;
+}
+
+
+.list-item div{
+  padding:5px;
+}
+
+.list-item span{
+  font-weight: bold;
+  padding: 2px;
+}
+
+.custom-btn{
+
+  padding: 10px;
+  background-color: rgb(30, 68, 192);
+  color:white;
+  transition: 0.5s;
+}
+
+.custom-btn:hover{
+  color:black;
+  background-color: white;
+  border: 1px solid black;
+}
+.group-list{
+  list-style: none;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:30px;
+  flex: 0 0 auto; /* Her öğenin aynı sabit genişliğe sahip olmasını sağlar */
+  justify-content: center;
+  align-items:center;
+}
+
+.group-list li{
+ flex:0 0;
+  border: 1px solid black;
+  min-width: 300px;
+  padding: 10px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.selected{
+background-color: lightgray;
+transition: 0.5s;
+}
+
+.sub-group span.titles{
+  font-weight: bold;
+}
+.pos-rel{
+  position: relative !important;
 }
